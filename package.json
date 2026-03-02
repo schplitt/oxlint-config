@@ -1,6 +1,6 @@
 {
   "name": "@schplitt/oxlint-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "My opinionated oxlint config with TypeScript, Node, imports, jsdoc, unicorn and oxc rules",
   "keywords": [
     "config",
