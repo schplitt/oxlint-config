@@ -129,6 +129,7 @@ These options exist as stubs (`yaml`, `jsonc`, `markdown`, `pnpm`) and will be w
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config)
 - [@nkzw/oxlint-config](https://github.com/nkzw-tech/oxlint-config)
+- [@schplitt/eslint-config](https://github.com/schplitt/eslint-config)
 
 ## License
 
