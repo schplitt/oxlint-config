@@ -1,0 +1,79 @@
+{
+  "name": "@schplitt/oxlint-config",
+  "version": "0.0.0",
+  "description": "My opinionated oxlint config with TypeScript, Node, imports, jsdoc, unicorn and oxc rules",
+  "keywords": [
+    "config",
+    "linter",
+    "oxc",
+    "oxlint",
+    "typescript"
+  ],
+  "homepage": "https://github.com/schplitt/oxlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/schplitt/oxlint-config/issues"
+  },
+  "license": "MIT",
+  "author": "schplitt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schplitt/oxlint-config.git"
+  },
+  "bin": {
+    "oxlint-config": "./dist/cli/index.mjs"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "lint": "oxlint && oxfmt --check",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "typecheck": "tsc --noEmit",
+    "prerelease": "tsc --noEmit && oxfmt . --check && tsdown && vitest run",
+    "release": "bumpp",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "@angular-eslint/eslint-plugin": "catalog:",
+    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
+    "find-up-simple": "catalog:",
+    "oxlint-tsgolint": "catalog:"
+  },
+  "devDependencies": {
+    "@angular-eslint/eslint-plugin": "catalog:",
+    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
+    "bumpp": "catalog:",
+    "changelogithub": "catalog:",
+    "citty": "catalog:",
+    "consola": "catalog:",
+    "find-up-simple": "catalog:",
+    "nypm": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "oxlint": ">=0.18.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
